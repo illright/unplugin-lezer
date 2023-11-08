@@ -1,28 +1,13 @@
-# unplugin-starter
+# unplugin-lezer
 
-[![NPM version](https://img.shields.io/npm/v/unplugin-starter?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-starter)
+[![NPM version](https://img.shields.io/npm/v/unplugin-lezer?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-lezer)
 
-Starter template for [unplugin](https://github.com/unjs/unplugin).
-
-## Template Usage
-
-To use this template, clone it down using:
-
-```bash
-npx degit unplugin/unplugin-starter my-unplugin
-```
-
-And do a global replacement of `unplugin-starter` with your plugin name.
-
-Then you can start developing your unplugin 🔥
-
-To test your plugin, run: `pnpm run dev`
-To release a new version, run: `pnpm run release`
+Universal plugin to import [Lezer](https://lezer.codemirror.net/) grammar files.
 
 ## Install
 
 ```bash
-npm i unplugin-starter
+npm i unplugin-lezer
 ```
 
 <details>
@@ -30,11 +15,11 @@ npm i unplugin-starter
 
 ```ts
 // vite.config.ts
-import Starter from 'unplugin-starter/vite'
+import lezer from 'unplugin-lezer/vite'
 
 export default defineConfig({
   plugins: [
-    Starter({ /* options */ }),
+    lezer(),
   ],
 })
 ```
@@ -48,11 +33,11 @@ Example: [`playground/`](./playground/)
 
 ```ts
 // rollup.config.js
-import Starter from 'unplugin-starter/rollup'
+import lezer from 'unplugin-lezer/rollup'
 
 export default {
   plugins: [
-    Starter({ /* options */ }),
+    lezer(),
   ],
 }
 ```
@@ -68,26 +53,10 @@ export default {
 module.exports = {
   /* ... */
   plugins: [
-    require('unplugin-starter/webpack')({ /* options */ })
+    require('unplugin-lezer/webpack')()
   ]
 }
 ```
-
-<br></details>
-
-<details>
-<summary>Nuxt</summary><br>
-
-```ts
-// nuxt.config.js
-export default defineNuxtConfig({
-  modules: [
-    ['unplugin-starter/nuxt', { /* options */ }],
-  ],
-})
-```
-
-> This module works for both Nuxt 2 and [Nuxt Vite](https://github.com/nuxt/vite)
 
 <br></details>
 
@@ -99,7 +68,7 @@ export default defineNuxtConfig({
 module.exports = {
   configureWebpack: {
     plugins: [
-      require('unplugin-starter/webpack')({ /* options */ }),
+      require('unplugin-lezer/webpack')(),
     ],
   },
 }
@@ -113,10 +82,10 @@ module.exports = {
 ```ts
 // esbuild.config.js
 import { build } from 'esbuild'
-import Starter from 'unplugin-starter/esbuild'
+import lezer from 'unplugin-lezer/esbuild'
 
 build({
-  plugins: [Starter()],
+  plugins: [lezer()],
 })
 ```
 
