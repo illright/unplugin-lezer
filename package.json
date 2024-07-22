@@ -1,7 +1,7 @@
 {
   "name": "unplugin-lezer",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packageManager": "pnpm@9.6.0",
   "description": "Universal plugin to import Lezer grammar files",
   "license": "MIT",
