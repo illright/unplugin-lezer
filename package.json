@@ -2,7 +2,7 @@
   "name": "unplugin-lezer",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@8.10.2",
+  "packageManager": "pnpm@9.6.0",
   "description": "Universal plugin to import Lezer grammar files",
   "license": "MIT",
   "homepage": "https://github.com/illright/unplugin-lezer#readme",
@@ -48,11 +48,6 @@
       "import": "./dist/esbuild.js",
       "require": "./dist/esbuild.cjs"
     },
-    "./types": {
-      "types": "./dist/types.d.ts",
-      "import": "./dist/types.js",
-      "require": "./dist/types.cjs"
-    },
     "./*": "./*"
   },
   "main": "dist/index.cjs",
@@ -81,7 +76,7 @@
   },
   "peerDependencies": {
     "esbuild": "*",
-    "rollup": "^3",
+    "rollup": "^3 || ^4",
     "vite": ">=3",
     "webpack": "^4 || ^5"
   },
@@ -100,24 +95,24 @@
     }
   },
   "dependencies": {
-    "@lezer/generator": "^1.5.1",
-    "unplugin": "^1.4.0"
+    "@lezer/generator": "^1.7.1",
+    "unplugin": "^1.11.0"
   },
   "devDependencies": {
-    "@types/node": "^20.5.2",
-    "@typescript-eslint/eslint-plugin": "^6.10.0",
-    "@typescript-eslint/parser": "^6.10.0",
-    "bumpp": "^9.2.0",
+    "@types/node": "^20.14.11",
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "@typescript-eslint/parser": "^7.17.0",
+    "bumpp": "^9.4.1",
     "chalk": "^5.3.0",
-    "eslint": "^8.47.0",
-    "esno": "^0.17.0",
-    "fast-glob": "^3.3.1",
-    "nodemon": "^3.0.1",
-    "rimraf": "^5.0.1",
-    "rollup": "^3.28.1",
-    "tsup": "^7.2.0",
-    "typescript": "^5.1.6",
-    "vite": "^4.4.9",
-    "webpack": "^5.88.2"
+    "eslint": "^8.57.0",
+    "esno": "^4.7.0",
+    "fast-glob": "^3.3.2",
+    "nodemon": "^3.1.4",
+    "rimraf": "^5.0.9",
+    "rollup": "^4.19.0",
+    "tsup": "^8.2.2",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4",
+    "webpack": "^5.93.0"
   }
 }
